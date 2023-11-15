@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+:root {
+  --Violet: hsl(257, 40%, 49%);
+  --Soft-Magenta: hsl(301, 70%, 71%);
+  --Hover-social: hsl(322, 100%, 66%);
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: var(--Violet);
+  background-image: url(./images/bg-desktop.svg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position-x: left;
+}
+:is(header, main, footer) {
+  max-width: 1440px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0 69px;
+}
+header {
+  padding: 54px 0 83px 69px;
+  & img {
+    width: 216px;
+  }
+}
+main {
+  display: flex;
+  & img {
+    height: 100%;
+    margin-left: 4px;
+  }
+  .info {
+    width: 520px;
+    margin-top: 39px;
+    margin-left: 53px;
+    color: white;
+    & h1 {
+      font-family: "Poppins";
+      font-size: 40px;
+      font-weight: 600;
+      line-height: 60px;
+    }
+    & p {
+      margin: 24px 0;
+      margin-right: 12px;
+      font-size: 18px;
+      font-family: "Open Sans";
+      line-height: 27px;
+    }
+    & button {
+      font-size: 18px;
+      line-height: 27px;
+      font-family: "Poppins";
+      padding-bottom: 3px;
+      color: var(--Violet);
+      border: none;
+      border-radius: 28px;
+      box-shadow: 2px 4px 9px 3px rgba(0, 0, 0, 25.86%);
+      width: 200px;
+      height: 56px;
+      cursor: pointer;
+      transition: 0.3s;
+      &:hover {
+        background-color: var(--Soft-Magenta);
+        color: white;
+      }
+    }
+  }
+}
+footer {
+  padding-top: 21px;
+  padding-right: 81px;
+  display: flex;
+  justify-content: flex-end;
+  color: white;
+  gap: 16px;
+  .icon {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 100%;
+    border: 1.18px solid white;
+    transition: 0.3s;
+    &:hover {
+      color: var(--Hover-social);
+      border-color: var(--Hover-social);
+    }
+  }
+}
+
+@media (width < 1100px) {
+  main {
+    flex-direction: column;
+    text-align: center;
+    .info {
+      width: auto;
+      margin-left: 0;
+    }
+  }
+  footer {
+    margin-top: 64px;
+    margin-bottom: 40px;
+    justify-content: center;
+  }
+}
